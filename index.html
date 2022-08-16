@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         #container {
+            border: 5px solid blue;
+            padding: 20px;
+        }
+        #container > div {
+            border: 5px solid red;
+            margin: 15px;
+        }
+       img {
+        margin: 15px;
+        height: 150px;
+       }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+        <!-- <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div>
+        <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div>
+        <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div> -->
+    </div>
+
+    <script>
+
+      
+        let n = prompt("Введите количество блоков:");
+        let p = prompt("Введите количество картинок (от 1 до 11):");
+        let s = "";
+        let pic = 1;
+
+        
+            for (i=1; i<=n; i++) {
+                                s += "<div>";
+                    for (j=1; j<= p; j ++) {
+                        if ( pic > 11) pic =1;
+                    s += `<img src="images/${pic++}.jpg">`;
+                  
+                    }  
+                    pic = 1;
+                s += "</div>";
+            }
+        
+
+        container.innerHTML = s;
+    </script>
+
+
+</body>
+</html>
